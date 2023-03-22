@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <style>
+                .navbar {
+            font-size: 2rem;
+            margin-bottom: 0px;
+            width: 100%;
+            top: 0;
+            display:flex;
+            padding: 2rem, 0;
+            background-color: #fff;
+            flex-direction: column;
+            justify-content: center;
+            height:65px;
+            z-index: 999;
+            position: sticky;
+        }
+        a {
+            display: block;
+        }
+        .nav__bar {
+            position: absolute;
+            background-color: #131313;
+            width: 2px;
+            border-radius: 1px;
+            height: 40px;
+            left: 67.5px;
+        }
+        .navbar__logo {
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color: black;
+            text-decoration: none;
+            transition: 20px, 10px;
+            position: absolute;
+            left: 80px;
+        }
+        .searchbox {
+            width: 120px;
+            background-color: rgb(245,245,245);
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-width: 2px;
+            position:absolute;
+            left: 200px;
+            font-size: 20px;
+        }
+        .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #131313;
+        left: 40px;
+        }
+        .navbar__toggle .bar {
+            display: block;
+        }
+        #mobile-menu {
+        position: absolute;
+        left: 20px;
+        }
+        .SignIn {
+        position: absolute;
+        right:40px;
+        font-size: 20px;
+        -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color:#131313;
+            font-family: Arial;
+        }
+        .price__availability p {
+            color: green;
+        }
+    /* .Addto__cart {
+        background-color: yellow;
+        color: black;
+        border-radius: 20px;
+        border: none;
+        height: 35px;
+        width: 150px;
+        font-size: 1.2rem;
+        cursor: pointer; 
+        margin-top: 10px;
+        margin-right: 10px;
+        transition: opacity 0.2s;
+    }
+    .Buy__now {
+        background-color: orange;
+        color: black;
+        border-radius: 20px;
+        border: none;
+        height: 35px;
+        width: 150px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+    
+    .Buy__now:hover {
+        opacity: .8;
+    }
+    
+    .Buy__now:active {
+        opacity: .5;
+    }
+    
+    .Addto__cart:hover {
+        opacity: .8;
+    }
+    
+    .Addto__cart:active {
+        opacity: .5;
+    } */
+    .product__container {
+        width: 50%;
+        height: 600px;
+        background-color: rgb(245,245,245);
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+    }
+    .BB__Image {
+        width:80%;
+        height:80%
+    }
+    a {
+        display: inline-block;
+        -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color:#131313;
+    }
+    .Categories p {
+        display: inline-block;
+    }
+    p {
+        display: block;
+    }
+    .Item__Details {
+        display: inline-flex;
+        width: 40%;
+        vertical-align: top;
+        margin-left: 80px;
+        line-height: 30px;
+    }
+    .Information p {
+        display: block;
+    }
+    .Name {
+        font-size: 35px;
+        margin-top: 10px;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+    .Collection {
+        -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+    }
+    .item__reference {
+        font-size: 13px;
+        color: gray;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .rating {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .price {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: Arial;
+        margin-top: 15dpx;
+        margin-bottom: 5px;
+    }
+    .size {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    .sizespan {
+        color: gray;
+    }
+    .Buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+    .AddTo-Bag {
+        font-size: 18px;
+        background-color: black;
+        padding-left:120px;
+        padding-right: 120px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        color: white;
+        font-family: Arial;
+    }
+    .Heart {
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="navbar__logo">GOAT</a>
+        <p class="nav__bar"></p>
+        <input type="text" class="searchbox" placeholder="Search">
+        <a href="SignUp.html" class="SignIn">Sign in</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class="Categories">
+        <a href="/">Bath and Body</a>
+        <p>/</p>
+        <a href="/">Bath Bombs</a>
+    </div>
+    <div class="Divider">
+    <div class="product__container">
+        <img src="/images/DiamondBathBomb.webp" class="BB__Image"alt="">
+    </div>
+    <div class="Item__Details">
+        <div class="Information">
+        <a href="/" class="Collection">GOAT Originals</a>
+        <p class="Name">Original GOAT milk Bath Bomb (3 count)</p>
+        <p class="item__reference">Item 001</p>
+        <p class="rating">unrated</p>
+        <p class="price">$19.99</p>
+        <p class="size"><span class="sizespan">Size:</span> Count (4.5 oz each)</p>
+        <div class="Buttons">
+            <button class="AddTo-Bag">
+                Add to Bag
+            </button>
+            <button class="Heart">&#9829;</button>
+        </div>
+    </div>
+    </div>
+</div>
+    <!-- <h1 class="Item__Name">Goat Milk Sugar Scrub </h1>
+    <div class="price__availability">
+    <p class="Amount">$9.99 - In stock</p>
+<div class="delivery">
+    <p>Free delivery tomorrow</p>
+    <button class="Addto__cart">Add to Cart</button>
+    <button class="Buy__now">Buy now</button>
+</div> -->
+</body>
+</html>

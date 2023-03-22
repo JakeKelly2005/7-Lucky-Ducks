@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOAT</title>
+    <style>
+        .navbar {
+            font-size: 2rem;
+            margin-bottom: 0px;
+            width: 100%;
+            top: 0;
+            display:flex;
+            padding: 2rem, 0;
+            background-color: #fff;
+            flex-direction: column;
+            justify-content: center;
+            height:65px;
+            z-index: 999;
+            position: sticky;
+        }
+        a {
+            display: block;
+        }
+        .nav__bar {
+            position: absolute;
+            background-color: #131313;
+            width: 2px;
+            border-radius: 1px;
+            height: 40px;
+            left: 67.5px;
+        }
+        .navbar__logo {
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color: black;
+            text-decoration: none;
+            transition: 20px, 10px;
+            position: absolute;
+            left: 80px;
+        }
+        .searchbox {
+            width: 120px;
+            background-color: rgb(230,230,230);
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-width: 2px;
+            position:absolute;
+            left: 200px;
+            font-size: 20px;
+        }
+        .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #131313;
+        left: 40px;
+        }
+        .navbar__toggle .bar {
+            display: block;
+        }
+        #mobile-menu {
+        position: absolute;
+        left: 20px;
+        }
+        .SignIn {
+        position: absolute;
+        right:40px;
+        font-size: 20px;
+        -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color:#131313;
+            font-family: Arial;
+        }
+        .TopBar__Image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-left: 0px;
+            border: none;
+            margin-right: 0px;
+            margin-top: 0px;
+            translate: 0px 10px;
+        }
+        
+        .New__Indicator {
+            text-align: center;
+            font-family: Arial;
+            font-weight: bold;
+            color: orange;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .Item {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial;
+            margin-top: 5px;
+            margin-bottom: 0px;
+        }
+        
+        .Slogan {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        
+        .Price {
+            text-align: center;
+            font-size: 15px;
+            font-family: Arial;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+        
+        .Button__container {
+            text-align: center;
+        }
+        .popular__products p {
+        margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .popular__products a {
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 13px;
+        }
+        .Buy__Btn {
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: Arial;
+            border-radius: 20px;
+            background-color: blue;
+            color: #fff;
+            padding-top: 7px;
+            padding-left: 15px;
+            padding-bottom: 7px;
+            padding-right: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .BathBomb__Container {
+            display: inline-block;
+            height:100px;
+            width: 100px;
+            margin-right: 30px;
+        }
+        .bathbomb {
+            height: 100%;
+            display: block;
+        }
+        .sugarscrub {
+            height: 100%;
+            display: block;
+        }
+        .SugarScrub__Container {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+        }
+        .popular__text {
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .BB__Price {
+            font-weight: bold;
+        }
+        .BB__Brand {
+            font-weight: 600;
+        }
+        .SS__Price {
+            font-weight: bold;
+        }
+        .SS__Brand {
+            font-weight: 600;
+        }
+        .popular__products {
+            display: flex;
+            height: 200px;
+            flex-direction: row;
+            justify-content: center;
+        }
+        a {
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            background-color:#131313;
+            margin-bottom: 4px;
+        }
+        .footer__link--items {
+            width: 150px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .footer__container {
+            font-family: Arial;
+            font-size: 13px;
+            margin-top: 50px;
+            height: 160px;
+            background-color: rgb(230,230,230);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .footer__container p {
+            font-weight: 600;
+        }
+        </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="index.html" class="navbar__logo">GOAT</a>
+    <p class="nav__bar"></p>
+    <input type="text" class="searchbox" placeholder="Search">
+    <a href="SignUp.html" class="SignIn">Sign in</a>
+    <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</div>
+<img src="/images/topimage.webp" class="TopBar__Image">
+<!-- <div class="popular">
+</div>
+<p class="New__Indicator">New</p>
+<h2 class="Item">G.O.A.T Sugar Scrub</h2>
+<h1 class="Slogan">Revitalize your skin.</h1>
+<h3 class="Price">From $9.99</h3>
+<div class="Button__container">
+<button class="Buy__Btn"><a href="/ProductBuy.html">Buy</a></button>
+</div> -->
+<p class="popular__text">See what's popular this week</p>
+<div class="popular__products">
+    <div class="BathBomb__Container">
+    <img src="/images/DiamondBathBomb.webp" alt="/" class="bathbomb">
+    <p class="BB__Brand">GOAT</p>
+    <a href="ProductBuy.html"class="BB__Name">Original GOAT Milk Bath Bomb (3 pack)</a>
+    <p class="BB__Price">$19.99</p>
+</div>
+<div class="SugarScrub__Container">
+    <img src="/images/sugarscrub.webp" alt="/" class="sugarscrub">
+    <p class="SS__Brand">GOAT</p>
+    <a class="SS__Name">Original GOAT Milk Sugar Scrub</a>
+    <p class="SS__Price">$9.99</p>
+</div>
+</div>
+<div class="footer__container">
+    <div class="footer__links">
+            <div class="footer__link--items">
+                <p>About Us</p>
+                <a href="/">Our Company</a>
+                <a href="/">Investment Opprotunites</a>
+                <a href="/">Affiliates</a>
+                <a href="/">Careers</a>
+                <a href="/">Our Responsibilities</a>
+            </div>
+            <div class="footer__link--items">
+                <p>Guest Services</p>
+                <a href="/">Check Delivery Status</a>
+                <a href="/">Contact us</a>
+                <a href="/">Return Policy</a>
+                <a href="/">Your Rights</a>
+                <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer__link--items">
+                <p>About Us</p>
+                <a href="/">How it works</a>
+                <a href="/">Testimonals</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer__link--items">
+                <p>About Us</p>
+                <a href="/">How it works</a>
+                <a href="/">Testimonals</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of Service</a>
+            </div>
+    </div>
+</body>
+</html>
+
+<style>
+
+.TopBar__Image {
+    width: 5;
+    font-weight: 5;
+    object-fit: cover;
+    margin-bottom: 0px;
+}
+
+.New__Indicator {
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    color: orange;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.Item {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.Slogan {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.Price {
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.Button__container {
+    text-align: center;
+}
+
+.Buy__Btn {
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial;
+    border-radius: 20px;
+    background-color: blue;
+    color: #fff;
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.Buy__Btn a {
+    color: #fff
+}
+
+</style>
